@@ -10,6 +10,9 @@
         h2 { margin-top: 30px; color: #2c3e50; }
         a { color: #e74c3c; }
         .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #888; }
+        .tiktok-login-btn { display: inline-block; background: #000; color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: 600; margin: 10px 0; }
+        .tiktok-login-btn:hover { background: #333; }
+        .login-note { font-size: 0.9em; color: #666; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -35,6 +38,11 @@
         <li>No real individuals' faces are depicted in AI-generated imagery</li>
         <li>A human reviews and approves all content before publication</li>
     </ul>
+
+    <h2>Connect Your TikTok Account</h2>
+    <p>To use our Content Posting API service, log in with your TikTok account:</p>
+    <a href="https://www.tiktok.com/v2/auth/authorize/?client_key=awsszhboiviefw6c&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https://fukuoka-ai-news.github.io/callback&state=fukuoka_ai_news" class="tiktok-login-btn">Log in with TikTok</a>
+    <p class="login-note">After logging in, you will be redirected to our callback page with an authorization code. This code is used to securely connect your account for video posting.</p>
 
     <h2>Links</h2>
     <ul>

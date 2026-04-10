@@ -5,65 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Fukuoka AI News</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #333; line-height: 1.6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #333; line-height: 1.7; }
         h1 { border-bottom: 2px solid #e74c3c; padding-bottom: 10px; }
-        h2 { margin-top: 30px; color: #2c3e50; }
+        h2 { margin-top: 36px; color: #2c3e50; }
+        h3 { margin-top: 24px; color: #34495e; }
+        ul { padding-left: 22px; }
+        table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; vertical-align: top; font-size: 0.95em; }
+        th { background: #f8f9fa; }
         .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #888; }
+        .entity { background: #f8f9fa; padding: 16px 20px; border-left: 4px solid #e74c3c; margin: 20px 0; }
     </style>
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> April 8, 2026</p>
-    <p><strong>Last Updated:</strong> April 8, 2026</p>
+    <p><strong>Effective Date:</strong> April 10, 2026</p>
+    <p><strong>Last Updated:</strong> April 10, 2026</p>
+
+    <div class="entity">
+        <strong>Data Controller:</strong><br>
+        Japan Network Group Inc. (株式会社ジャパンネットワークグループ)<br>
+        Registered Address: 2-12-8 Daimyo, Chuo-ku, Fukuoka-shi, Fukuoka, Japan<br>
+        (福岡県福岡市中央区大名２丁目１２番８号)<br>
+        Privacy Contact: <a href="mailto:k-senba@japannetwork.co.jp">k-senba@japannetwork.co.jp</a>
+    </div>
+
+    <p>Japan Network Group Inc. ("we", "us", "our") operates the Fukuoka AI News service ("Service"). This Privacy Policy describes how we collect, use, store, and protect information in connection with the Service, and your rights regarding that information.</p>
 
     <h2>1. Overview</h2>
-    <p>Fukuoka AI News ("the Service") is an automated content creation service that generates and publishes AI-created local news video summaries for the Fukuoka area on TikTok. This Privacy Policy describes how we handle information in connection with our Service.</p>
+    <p>Fukuoka AI News is an automated content creation service that generates and publishes AI-created local news video summaries for the Fukuoka area on TikTok. The Service uses the TikTok Content Posting API and TikTok Login Kit solely for publishing videos to TikTok accounts authorized by the operator.</p>
 
     <h2>2. Information We Collect</h2>
-    <p>The Service collects only the minimum data required to operate:</p>
+
+    <h3>2.1 TikTok API Data</h3>
+    <p>When authentication with TikTok is performed, the following data is obtained through the TikTok API:</p>
+    <table>
+        <thead>
+            <tr><th>Field</th><th>Source / Scope</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>access_token</code></td>
+                <td>OAuth 2.0 (Login Kit)</td>
+                <td>Authenticate API requests to publish videos</td>
+            </tr>
+            <tr>
+                <td><code>refresh_token</code></td>
+                <td>OAuth 2.0 (Login Kit)</td>
+                <td>Refresh the access token when expired</td>
+            </tr>
+            <tr>
+                <td><code>open_id</code></td>
+                <td>OAuth 2.0 (Login Kit)</td>
+                <td>Identify the TikTok account authorized for posting</td>
+            </tr>
+            <tr>
+                <td><code>user.info.basic</code> (display name, avatar URL, union_id)</td>
+                <td><code>user.info.basic</code> scope</td>
+                <td>Display the connected account on the operator's dashboard</td>
+            </tr>
+            <tr>
+                <td><code>video.upload</code> / <code>video.publish</code></td>
+                <td>Content Posting API</td>
+                <td>Upload and publish AI-generated videos to the operator's own TikTok account</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>No additional TikTok data (followers, analytics beyond what is needed to verify publication, DMs, comments) is collected.</p>
+
+    <h3>2.2 Other Data</h3>
     <ul>
-        <li><strong>TikTok API authentication tokens:</strong> Used solely for publishing videos to our TikTok account</li>
-        <li><strong>Publicly available news data:</strong> Collected from public news sources for content creation</li>
+        <li><strong>Publicly available news data</strong> — collected from public news sources for AI content creation. This does not include personal data.</li>
     </ul>
-    <p><strong>We do NOT collect:</strong></p>
+
+    <h3>2.3 What We Do NOT Collect</h3>
     <ul>
-        <li>Personal data from TikTok viewers or users</li>
-        <li>Cookies or tracking information</li>
-        <li>User browsing behavior</li>
+        <li>Personal data from TikTok viewers or the general public</li>
+        <li>Cookies, tracking pixels, or analytics on this website</li>
+        <li>Browsing behavior or device fingerprints</li>
         <li>Contact information from viewers</li>
+        <li>Location data beyond publicly available news context</li>
     </ul>
 
-    <h2>3. How We Use Information</h2>
+    <h2>3. Legal Basis for Processing (GDPR)</h2>
+    <p>For users in the European Economic Area (EEA) and the United Kingdom, we process personal data on the following legal bases under the General Data Protection Regulation (GDPR):</p>
     <ul>
-        <li>Authentication data is used solely for posting videos to our TikTok account via the Content Posting API</li>
+        <li><strong>Consent (Art. 6(1)(a))</strong> — when you authorize the Service via TikTok Login Kit, you provide explicit consent for us to access and use the listed API data</li>
+        <li><strong>Contract (Art. 6(1)(b))</strong> — to provide the Service you have requested</li>
+        <li><strong>Legitimate interests (Art. 6(1)(f))</strong> — to operate, secure, and improve the Service, provided such interests are not overridden by your rights</li>
+    </ul>
+
+    <h2>4. How We Use Information</h2>
+    <ul>
+        <li>Authentication data is used solely to authenticate with TikTok and publish videos via the Content Posting API</li>
         <li>News data is used to generate AI video scripts and content</li>
-        <li>TikTok analytics data (if accessed) is used only to improve our content quality</li>
+        <li>We do not use collected data for advertising, profiling, or automated decision-making with legal effects</li>
+        <li>We do not sell or rent any personal information</li>
     </ul>
 
-    <h2>4. Data Sharing</h2>
-    <p>We do not sell, trade, or share personal data with third parties. The only data transmitted externally is:</p>
+    <h2>5. Data Sharing and Disclosure</h2>
+    <p>We do not sell, trade, or share personal data with third parties. Data may be transmitted to the following processors strictly for service operation:</p>
     <ul>
-        <li>Video content posted to TikTok via the official API</li>
-        <li>API requests to AI service providers (fal.ai, Anthropic) for content generation — no personal data is included</li>
+        <li><strong>TikTok / ByteDance</strong> — video publication via the official Content Posting API</li>
+        <li><strong>fal.ai</strong> — AI image and video generation (no personal data transmitted)</li>
+        <li><strong>Anthropic</strong> — AI text generation (no personal data transmitted)</li>
+    </ul>
+    <p>We may disclose information if required by law, court order, or valid legal process, or to protect the rights, property, or safety of Japan Network Group Inc., our users, or others.</p>
+
+    <h2>6. International Data Transfers</h2>
+    <p>Some of our processors (TikTok, fal.ai, Anthropic) are located outside Japan, including in the United States and Singapore. When data is transferred internationally, we rely on appropriate safeguards such as Standard Contractual Clauses (SCCs) and the vendors' own compliance programs.</p>
+
+    <h2>7. Data Retention</h2>
+    <table>
+        <thead>
+            <tr><th>Data Type</th><th>Retention Period</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>TikTok <code>access_token</code></td><td>Until expiry (typically 24 hours) or revocation</td></tr>
+            <tr><td>TikTok <code>refresh_token</code></td><td>Until expiry (typically 365 days), revocation, or user deletion request</td></tr>
+            <tr><td>TikTok <code>open_id</code> / <code>union_id</code></td><td>Until user deletion request or account disconnection</td></tr>
+            <tr><td>User basic info (display name, avatar URL)</td><td>Until user deletion request or account disconnection</td></tr>
+            <tr><td>Generated video files and scripts</td><td>Up to 90 days after publication for operational review, then deleted</td></tr>
+            <tr><td>Operational logs</td><td>Up to 30 days</td></tr>
+        </tbody>
+    </table>
+    <p>When the retention period expires, data is deleted or irreversibly anonymized.</p>
+
+    <h2>8. Data Security</h2>
+    <p>API tokens and configuration data are stored locally on secured hardware operated by Japan Network Group Inc. with the following safeguards:</p>
+    <ul>
+        <li>Access restricted to authorized personnel only</li>
+        <li>Full-disk encryption on storage devices</li>
+        <li>Tokens stored in environment variables or encrypted configuration files, never committed to source control</li>
+        <li>All API communications use HTTPS/TLS</li>
+        <li>No personal data is stored in public cloud services</li>
     </ul>
 
-    <h2>5. Data Storage and Security</h2>
-    <p>API tokens and configuration data are stored locally on secured hardware. No personal data is stored in cloud services. Access is restricted to the Service operator.</p>
+    <h2>9. Your Rights</h2>
 
-    <h2>6. AI-Generated Content</h2>
-    <p>All video content is generated using artificial intelligence. Videos are clearly labeled as AI-generated content per TikTok's guidelines. AI recreations do not depict identifiable real individuals.</p>
+    <h3>9.1 GDPR Rights (EEA / UK users)</h3>
+    <p>If you are located in the EEA or UK, you have the following rights under the GDPR:</p>
+    <ul>
+        <li><strong>Right of access</strong> — request a copy of your personal data</li>
+        <li><strong>Right to rectification</strong> — correct inaccurate data</li>
+        <li><strong>Right to erasure ("right to be forgotten")</strong> — request deletion of your data</li>
+        <li><strong>Right to restrict processing</strong></li>
+        <li><strong>Right to data portability</strong></li>
+        <li><strong>Right to object</strong> to processing based on legitimate interests</li>
+        <li><strong>Right to withdraw consent</strong> at any time</li>
+        <li><strong>Right to lodge a complaint</strong> with your local supervisory authority</li>
+    </ul>
 
-    <h2>7. Children's Privacy</h2>
-    <p>The Service does not knowingly collect information from children under 13. Our content is intended for general audiences.</p>
+    <h3>9.2 CCPA Rights (California residents)</h3>
+    <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA) and CPRA:</p>
+    <ul>
+        <li><strong>Right to know</strong> what personal information we collect, use, and disclose</li>
+        <li><strong>Right to delete</strong> personal information we have collected</li>
+        <li><strong>Right to correct</strong> inaccurate personal information</li>
+        <li><strong>Right to opt out of "sale" or "sharing"</strong> of personal information — we do not sell or share personal information</li>
+        <li><strong>Right to non-discrimination</strong> for exercising your CCPA rights</li>
+    </ul>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>This Privacy Policy may be updated periodically. Changes will be reflected on this page with an updated "Last Updated" date.</p>
+    <h3>9.3 Rights under the Japanese APPI</h3>
+    <p>Users in Japan have rights under the Act on the Protection of Personal Information (個人情報保護法, APPI) to request disclosure, correction, suspension of use, and deletion of their personal data held by us.</p>
 
-    <h2>9. Contact</h2>
-    <p>For privacy-related questions or concerns, please reach out via our TikTok account or through the contact information provided on our main page.</p>
+    <h2>10. How to Exercise Your Rights / Data Deletion</h2>
+    <p>To exercise any of the rights above, including requesting deletion of data collected via the TikTok API, please contact us at <a href="mailto:k-senba@japannetwork.co.jp">k-senba@japannetwork.co.jp</a> with:</p>
+    <ol>
+        <li>The TikTok <code>open_id</code> or display name of the connected account (if applicable)</li>
+        <li>The nature of your request (access, deletion, correction, etc.)</li>
+        <li>Proof of identity sufficient to verify your request</li>
+    </ol>
+    <p>We will respond within 30 days. You may also disconnect the Service from your TikTok account at any time via your <a href="https://www.tiktok.com/setting/apps-and-websites" target="_blank" rel="noopener">TikTok authorized apps settings</a>, which will revoke our access tokens. Upon revocation, any cached tokens are invalidated and associated data is deleted within 30 days.</p>
+
+    <h2>11. Children's Privacy</h2>
+    <p>The Service is not directed to children under the age of 13 (or under 16 in the EEA). We do not knowingly collect personal information from children. If we become aware that we have collected personal information from a child without parental consent, we will promptly delete it.</p>
+
+    <h2>12. AI-Generated Content</h2>
+    <p>All video content published by the Service is generated using artificial intelligence and is clearly labeled as AI-generated per TikTok's guidelines. AI recreations do not depict identifiable real individuals.</p>
+
+    <h2>13. Changes to This Policy</h2>
+    <p>This Privacy Policy may be updated periodically. Material changes will be communicated on this page with an updated "Last Updated" date. Continued use of the Service after changes constitutes acceptance of the updated Policy.</p>
+
+    <h2>14. Contact</h2>
+    <p>For privacy-related questions, concerns, or to exercise your rights, please contact us at:</p>
+    <p>
+        Japan Network Group Inc. (株式会社ジャパンネットワークグループ)<br>
+        2-12-8 Daimyo, Chuo-ku, Fukuoka-shi, Fukuoka, Japan<br>
+        Email: <a href="mailto:k-senba@japannetwork.co.jp">k-senba@japannetwork.co.jp</a>
+    </p>
 
     <div class="footer">
-        <p>&copy; 2026 Fukuoka AI News. <a href="index.html">Home</a> | <a href="terms.html">Terms of Service</a></p>
+        <p>&copy; 2026 Japan Network Group Inc. | Fukuoka AI News. <a href="index.html">Home</a> | <a href="terms.html">Terms of Service</a></p>
     </div>
 </body>
 </html>
